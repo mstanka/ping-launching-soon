@@ -1,0 +1,149 @@
+.container {
+  margin: 1rem;
+}
+
+header {
+
+  .logo {
+    margin-top: 3rem;
+
+    img {
+      width: 80px;
+    }
+  }  
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+
+  span {
+    font-weight: 700;
+    color: #000;
+  }
+}
+
+p {
+  font-size: 1rem;
+  padding: 1rem 0;
+  color: #000;
+}
+
+#form {
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 600px) {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 900px;
+  }
+
+  input {
+    padding: 1rem 1.8rem;
+    border: 1px solid $secondary-pale-blue;
+    border-radius: 1.5rem;
+    color: $secondary-pale-blue;
+    opacity: .7; 
+    max-width: 600px;
+    width: 300px;
+    outline: none;   
+
+    &:active {
+      opacity: 1;
+      color: #000;
+    }
+    @media screen and (min-width: 800px) {
+      width: 400px;
+    }      
+  }
+
+  .alert {
+    font-size: .8rem;
+    font-style: italic;
+    color: $secondary-light-red;
+    margin: .5rem 0 1rem 0;
+
+    @media screen and (min-width: 600px) {
+      // to place it below input?
+        
+    }
+  }
+
+  button {
+    display: inline-block;
+    margin: 1rem 0 3rem 0;
+    padding: 1rem 1.8rem;
+    border-radius: 1.5rem;
+    border: 1px solid $primary-color;
+    box-shadow: 2px 2px 5px $neutral-color;
+    background-color: $primary-color; 
+    outline: none;  
+    color: #fff;
+    letter-spacing: .1rem; 
+    max-width: 500px;
+    width: 300px; 
+
+    @media screen and (min-width: 800px) {
+      margin: 0 0 0 1rem; 
+      width: 250px;  
+    }
+
+    &:hover {      
+      transition: .5s ease-in-out; 
+      background: darken($primary-color, 20%);
+      cursor: pointer;      
+    }
+
+    &:active {
+      transform: scale(.9);      
+    }    
+  }
+}
+
+.hero__img-ilustration {
+  width: 90vw;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 600px) {
+    margin-top: 5rem;
+  }
+}
+
+footer {
+
+  .social {
+    margin-top: 8rem;    
+
+    i {
+      font-size: 1rem;
+      color: $primary-color;
+      border: 1px solid $neutral-color;
+      padding: .5rem;
+      border-radius: 50%;
+      margin: .5rem;
+
+      &:hover {
+        color: white;
+        background-color: $primary-color;
+        transition: .5s ease-in-out;
+      }
+    }
+  }
+
+  p {
+    font-size: .9rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+}
+
+.attribution { 
+  font-size: 11px; 
+
+  a { 
+    color: hsl(228, 45%, 44%); 
+  }
+}
