@@ -6,7 +6,14 @@ form.addEventListener("submit", submitEmail);
 
 // submit email if valid input
 function submitEmail(e) {
-  if (email.value.trim() == "" || !validateEmail(email.value)) {
+  if (email.value.trim() == "") {
+    //show error
+    showError("Whoops! It looks like you forgot to add your email.");
+
+    // highligth the input
+    email.style.borderColor = "hsl(354, 100%, 66%)";
+  }
+  else if (!validateEmail(email.value)) {
     // show error
     showError("Please provide a valid email address");
 
