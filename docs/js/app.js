@@ -54,7 +54,7 @@ function clearError() {
 // hightlight input and add an example to input field
 function highlight() {
   email.style.borderColor = "hsl(354, 100%, 66%)";
-  email.value = "";
-  email.placeholder = "email@example.com";
+  //email.value = "";
+  //email.placeholder = "email@example.com";
   placeholder.style.color = "#000";
 }
