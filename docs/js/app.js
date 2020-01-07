@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
-const email = document.querySelector("input");
+const email = document.getElementById("email");
 const button = document.querySelector("button");
+const placeholder = document.querySelector("input[placeholder]");
 
 form.addEventListener("submit", submitEmail);
 
@@ -9,17 +10,12 @@ function submitEmail(e) {
   if (email.value.trim() == "") {
     //show error
     showError("Whoops! It looks like you forgot to add your email.");
-
-    // highligth the input
-    email.style.borderColor = "hsl(354, 100%, 66%)";
+    highlight(); 
   }
   else if (!validateEmail(email.value)) {
     // show error
     showError("Please provide a valid email address");
-
-    // highligth the input
-    email.style.borderColor = "hsl(354, 100%, 66%)";
-    //email.value.innerText = "email@email/com";
+    highlight();     
   } 
   e.preventDefault();
 }
@@ -52,4 +48,13 @@ function showError(error) {
 function clearError() {
   document.querySelector(".alert").remove();
   email.style.borderColor = "hsl(223, 100%, 88%)";
+  placeholder.style.color = "hsl(223, 100%, 88%)";
+}
+
+// hightlight input and add an example to input field
+function highlight() {
+  email.style.borderColor = "hsl(354, 100%, 66%)";
+  email.value = "";
+  email.placeholder = "email@example/com";
+  placeholder.style.color = "#000";
 }

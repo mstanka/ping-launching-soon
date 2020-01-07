@@ -1,5 +1,6 @@
 .container {
-  margin: 1rem;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 header {
@@ -45,15 +46,10 @@ p {
     border: 1px solid $secondary-pale-blue;
     border-radius: 1.5rem;
     color: $secondary-pale-blue;
-    opacity: .7; 
     max-width: 600px;
     width: 300px;
-    outline: none;   
-
-    &:active {
-      opacity: 1;
-      color: #000;
-    }
+    outline: none; 
+      
     @media screen and (min-width: 800px) {
       width: 400px;
     }      
@@ -63,11 +59,24 @@ p {
     font-size: .8rem;
     font-style: italic;
     color: $secondary-light-red;
-    margin: .5rem 0 1rem 0;
-
-    @media screen and (min-width: 600px) {
+    margin: .5rem 0 1rem 0; 
+    
+    @media screen and (min-width: 700px) {
       // to place it below input?
-        
+      position: absolute;
+      left: 15%;    
+    }
+
+    @media screen and (min-width: 900px) {
+      left: 20%;
+    }
+
+    @media screen and (min-width: 1100px) {
+      left: 25%;
+    }
+
+    @media screen and (min-width: 1400px) {
+      left: 28%;
     }
   }
 
@@ -85,7 +94,7 @@ p {
     max-width: 500px;
     width: 300px; 
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 700px) {
       margin: 0 0 0 1rem; 
       width: 250px;  
     }
