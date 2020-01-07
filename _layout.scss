@@ -19,6 +19,10 @@ h1 {
   font-size: 1.6rem;
   margin-top: 2rem;
 
+  @media screen and (min-width: 600px) {
+    font-size: 2.5rem;
+  }
+
   span {
     font-weight: 700;
     color: #000;
@@ -29,6 +33,10 @@ p {
   font-size: 1rem;
   padding: 1rem 0;
   color: #000;
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.4rem;
+  }
 }
 
 #form {
